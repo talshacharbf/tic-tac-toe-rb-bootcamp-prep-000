@@ -79,3 +79,35 @@ def current_player(board)
     return "O"
   end
 end
+
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+
+  def won?(board)
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
+  end
+end
+
+def full?(board)
+  board.all? do |combo|
+    combo == "X" || combo == "O"
+  end
+end
+
+def draw?(board)
+  full?(board) and !won?(board)
+end
+
+def over?(board)
+  draw?(board) or won?(board)
+end
+
+def winner(board)
+  if winner = won?(board)
+    board[winner[0]]
+  end
+end
