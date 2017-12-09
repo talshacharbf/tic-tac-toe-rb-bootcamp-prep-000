@@ -113,8 +113,8 @@ def winner(board)
 end
 
 def play(board)
-  i = true
-  until i == over?(board)
+  i = over?(board)
+  until i == true
   turn(board)
   end
   if won?(board) == true
