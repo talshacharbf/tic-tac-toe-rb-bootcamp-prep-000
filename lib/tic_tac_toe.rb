@@ -122,5 +122,4 @@ def play(board)
     else
     puts "Cat's Game!"
   end
-  play(board)
 end
