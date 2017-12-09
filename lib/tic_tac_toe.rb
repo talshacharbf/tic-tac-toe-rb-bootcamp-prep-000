@@ -120,6 +120,6 @@ def play(board)
         puts "Cat's Game!"
       end
   else turn(board)
-    play (board)
   end
+  play(board)
 end
