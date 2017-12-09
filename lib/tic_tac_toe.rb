@@ -114,15 +114,12 @@ end
 
 def play(board)
   if over?(board) == false
-    i = over?(board)
-    until i == true
-      turn(board)
-    end
+    turn(board)
   else
-  if draw?(board) == true
+    if draw?(board) == true
     puts "Cat's Game!"
     else
     puts "Congratulations #{winner(board)}"
-  end
+    end
 end
 end
