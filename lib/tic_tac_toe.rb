@@ -52,7 +52,7 @@ def turn(board)
   user_input = gets.strip
   converted_input = input_to_index(user_input)
   if valid_move?(board, converted_input) == true
-  move(board, converted_input, character)
+  move(board, converted_input, currentplayer(board))
   display_board(board)
   else
     turn(board)
