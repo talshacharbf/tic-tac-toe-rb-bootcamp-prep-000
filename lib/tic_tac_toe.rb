@@ -122,5 +122,3 @@ def play(board)
     puts "Congratulations #{winner(board)}"
     end
 end
-play(board)
-end
